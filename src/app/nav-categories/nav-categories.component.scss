@@ -1,0 +1,14 @@
+@import "../shared/wide_common.scss";
+
+.nav-categories {
+    .content {
+        display: flex;
+        color: aliceblue;
+        font-size: 1.6em;
+        margin-top: 16px;
+
+        .spacer {
+            flex: 1 1 auto;
+        }
+    }
+}

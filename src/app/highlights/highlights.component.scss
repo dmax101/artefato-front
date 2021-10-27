@@ -1,0 +1,17 @@
+@import "../shared/wide_common.scss";
+
+.highlights {
+    height: 55px;
+    background-color: transparent;
+    height: fit-content;
+    
+    .content {
+        mat-card {
+            height: 150px;
+            margin-top: 16px;
+            background-image: url("https://i.pinimg.com/564x/d7/13/c3/d713c3f4533544a10e5154f81c2354ea.jpg");
+            background-size: cover;
+            border-radius: 25px;
+        }
+    }
+}

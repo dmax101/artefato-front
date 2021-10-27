@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+}
+html, body { height: 100%; }
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    
+    background: rgba(9,9,121,1);
+    background: radial-gradient(circle, rgba(0,211,255,1) 0%, rgba(9,9,121,1) 100%);
+    transition: 1s;
+    
+    @media only screen and (max-width: 420px) {
+    }
+}
