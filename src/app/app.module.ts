@@ -9,11 +9,14 @@ import { HeadComponent } from './head/head.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 import { HighlightsComponent } from './highlights/highlights.component';
 import { NavCategoriesComponent } from './nav-categories/nav-categories.component';
 import { GaleryComponent } from './galery/galery.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,8 +27,11 @@ import { GaleryComponent } from './galery/galery.component';
     GaleryComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
+    MatGridListModule,
     AppRoutingModule,
+    MatTabsModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,

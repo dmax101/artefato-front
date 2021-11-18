@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../shared/model/product.model';
+import { ProductService } from '../shared/service/product.service';
 
 @Component({
   selector: 'app-galery',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GaleryComponent implements OnInit {
 
-  constructor() { }
+  public products: Product[] = [];
+
+  constructor(
+    public productService: ProductService
+  ) { }
 
   ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts() {
+    this.productService.getAllProducts().subscribe(
+      data => {
+        this.products = data;
+        
+        console.log(this.products);
+        
+      }
+    );
   }
 
 }

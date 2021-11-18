@@ -1,23 +1,22 @@
 <div class="galery">
-    <div class="content">
-        <div class="row">
-            <mat-card class="column">
-            </mat-card>
-            <mat-card class="column">
-            </mat-card>
-        </div>
-        <div class="row">
-            <mat-card class="column">
-            </mat-card>
-            <mat-card class="column">
-            </mat-card>
-        </div>
-        <div class="row">
-            <mat-card class="column">
-            </mat-card>
-            <mat-card class="column">
-            </mat-card>
-        </div>
+  <mat-tab-group class="content"> </mat-tab-group>
 
-    </div>
+  <mat-tab-group class="content">
+    <mat-tab class="flex" label="PRODUTOS">
+      <ng-container *ngFor="let product of products">
+        <mat-card
+          class="column"
+          [ngStyle]="{
+            'background-image': 'url(' + product.imageURL[0] + ')'
+          }"
+        >
+          <mat-card-header class="card-title">{{
+            product.name
+          }}</mat-card-header>
+        </mat-card>
+      </ng-container>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="overlay"></div>
+  <div class="modal">modal para imagem</div>
 </div>
