@@ -5,6 +5,7 @@
     <mat-tab class="flex" label="PRODUTOS">
       <ng-container *ngFor="let product of products">
         <mat-card
+          (click)="getPaymentInfo(product)"
           class="column"
           [ngStyle]="{
             'background-image': 'url(' + product.imageURL[0] + ')'
@@ -17,6 +18,10 @@
       </ng-container>
     </mat-tab>
   </mat-tab-group>
-  <div class="overlay"></div>
-  <div class="modal">modal para imagem</div>
+  <app-payment
+    [pixImage]="pixImage"
+    [style.visibility]="paymentInfoIsHidden ? 'hidden' : 'visible'"
+    (click)="paymentInfoIsHidden = true; pixImage = ''"
+  >
+  </app-payment>
 </div>
